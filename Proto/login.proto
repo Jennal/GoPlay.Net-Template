@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package Common.Protocols;
+
+message LoginRequest {
+    string Username = 1;
+}
+
+message LoginResponse {
+    int32 Id = 1;
+    string Username = 2;
+}
