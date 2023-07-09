@@ -5,6 +5,7 @@ using GoPlay.Services.Core.Protocols;
 
 namespace Processor.Login;
 
+[ServerTag(ServerTag.FrontEnd)]
 [Processor("login")]
 public class LoginProcessor : Common.Processor
 {

@@ -58,6 +58,17 @@ public abstract partial class Processor : ProcessorBase
         var userId = SessionManager.Get<PbInt>(clientId, Consts.SessionKeys.UserId);
         return userId?.Value ?? Consts.Id.INVALID_USER_ID;
     }
+    
+    protected virtual string GetUserName(Header header)
+    {
+        return GetUserName(header.ClientId);
+    }
+
+    protected virtual string GetUserName(uint clientId)
+    {
+        var userName = SessionManager.Get<PbString>(clientId, Consts.SessionKeys.UserName);
+        return userName?.Value ?? string.Empty;
+    }
 
     protected virtual string GetClientAgent(uint clientId)
     {
