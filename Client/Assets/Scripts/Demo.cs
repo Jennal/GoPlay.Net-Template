@@ -54,7 +54,7 @@ public class Demo : MonoBehaviour
         {
             Username = name
         });
-        Debug.Log($"Login Request: {status} => {data}");
+        Debug.Log($"Login Request: {status.Code} => {data}");
     }
     
     [Button(ButtonSizes.Large)]
@@ -70,7 +70,7 @@ public class Demo : MonoBehaviour
         {
             Value = text
         });
-        Debug.Log($"Echo Request: {status} => {data?.Value}");
+        Debug.Log($"Echo Request: {status.Code} => {data?.Value}");
     }
     
     [Button(ButtonSizes.Large)]
