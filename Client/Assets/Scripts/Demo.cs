@@ -6,10 +6,15 @@ using GoPlay.Services.Core.Transport.NetCoreServer;
 using GoPlay.Services.Extension.Frontend;
 using Sirenix.OdinInspector;
 using UnityEngine;
+using GoPlay.Clients;
 
 public class Demo : MonoBehaviour
 {
     private Client<NcClient> _client = new Client<NcClient>();
+
+    private void Awake() {
+        _client.MainThreadActionRunner = UnityMainThreadActionRunner.Instance;
+    }
 
     private void OnEnable()
     {
