@@ -75,7 +75,7 @@ public class Demo : MonoBehaviour
         {
             Value = text
         });
-        Debug.Log($"Echo Request: {status.Code} => {data?.Value}");
+        Debug.Log($"Echo Request: {status} => {data?.Value}");
     }
     
     [Button(ButtonSizes.Large)]
