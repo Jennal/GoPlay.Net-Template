@@ -59,7 +59,7 @@ public class Demo : MonoBehaviour
         {
             Username = name
         });
-        Debug.Log($"Login Request: {status} => {data}");
+        Debug.Log($"Login Request: {status.Code} => {data}");
     }
     
     [Button(ButtonSizes.Large)]
