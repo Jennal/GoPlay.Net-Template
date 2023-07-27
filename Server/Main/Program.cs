@@ -1,7 +1,7 @@
 ﻿using System.CommandLine;
 using System.CommandLine.NamingConventionBinder;
-using GoPlay.Services;
-using GoPlay.Services.Core.Transport.NetCoreServer;
+using GoPlay;
+using GoPlay.Core.Transport.NetCoreServer;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Processor.Echo;
@@ -88,6 +88,8 @@ internal class Service : IHostedService
         _server.Register(new EchoProcessor());
         
         _serverTask = _server.Start(_host, _port);
+        Console.WriteLine($"[{DateTime.Now:yyyy-MM-dd HH:mm:ss.fff)}] Server<{_server.TransportType.Name}> started!");
+        
         return Task.CompletedTask;
     }
 

@@ -1,4 +1,4 @@
-﻿using GoPlay.Services.Core.Protocols;
+﻿using GoPlay.Core.Protocols;
 
 namespace Common;
 

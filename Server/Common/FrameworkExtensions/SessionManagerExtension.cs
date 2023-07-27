@@ -1,5 +1,5 @@
-using GoPlay.Services;
-using GoPlay.Services.Core.Protocols;
+using GoPlay;
+using GoPlay.Core.Protocols;
 
 namespace Common;
 

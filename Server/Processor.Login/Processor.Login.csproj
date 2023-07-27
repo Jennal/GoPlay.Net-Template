@@ -2,7 +2,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Common\Common.csproj" />
-    <ProjectReference Include="..\GoPlay.Net\Frameworks\Server\Server.csproj" />
+    <PackageReference Include="GoPlay.Server" Version="0.1.0" />
   </ItemGroup>
 
   <PropertyGroup>
