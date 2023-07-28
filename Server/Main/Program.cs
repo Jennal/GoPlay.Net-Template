@@ -80,7 +80,7 @@ internal class Service : IHostedService
     public Task StartAsync(CancellationToken _)
     {
         _server = new Server<NcServer>();
-        Console.WriteLine($"[{DateTime.Now:yyyy-MM-dd HH:mm:ss.fff)}] Server<{_server.TransportType.Name}> starting: {_host}:{_port}");
+        Console.WriteLine($"[{DateTime.Now:yyyy-MM-dd HH:mm:ss.fff}] Server<{_server.TransportType.Name}> starting: {_host}:{_port}");
 
         _server.RegisterFilter(new LoggerFilter());
 
@@ -88,7 +88,7 @@ internal class Service : IHostedService
         _server.Register(new EchoProcessor());
         
         _serverTask = _server.Start(_host, _port);
-        Console.WriteLine($"[{DateTime.Now:yyyy-MM-dd HH:mm:ss.fff)}] Server<{_server.TransportType.Name}> started!");
+        Console.WriteLine($"[{DateTime.Now:yyyy-MM-dd HH:mm:ss.fff}] Server<{_server.TransportType.Name}> started!");
         
         return Task.CompletedTask;
     }
